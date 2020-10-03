@@ -44,7 +44,7 @@ buckets.
 
 What is the time and space complexity of the counting sort algorithm?
 '''
-def counting_sort(arr, maximum=None):
+def counting_sort(arr, maximum=None): # O(n+k) , because it doesn't work good for big numbers
     # Your code here
     if len(arr) > 0:
         if min(arr) < 0:
@@ -80,5 +80,6 @@ def counting_sort(arr, maximum=None):
        
     return arr
 
-l = [8, 2, 5, 5]
+
+l = [8, 2, 5, 5, 1, 6, 50000000 ]
 print(counting_sort(l))
