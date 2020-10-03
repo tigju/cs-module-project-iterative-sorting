@@ -63,20 +63,20 @@ def counting_sort(arr, maximum=None):
             count[arr[i]] += 1
 
         # Store the cummulative count
-        for i in range(1, maximum+1):
-            count[i] += count[i - 1]
+        for j in range(1, maximum+1):
+            count[j] += count[j - 1]
 
         # Find the index of each element of the original array in count array
         # place the elements in output array
-        i = size - 1
-        while i >= 0:
-            output[count[arr[i]] - 1] = arr[i]
-            count[arr[i]] -= 1
-            i -= 1
+        k = size - 1
+        while k >= 0:
+            output[count[arr[k]] - 1] = arr[k]
+            count[arr[k]] -= 1
+            k -= 1
 
         # Copy the sorted elements into original array
-        for i in range(0, size):
-            arr[i] = output[i]
+        for n in range(0, size):
+            arr[n] = output[n]
        
     return arr
 
